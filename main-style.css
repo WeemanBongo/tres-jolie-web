@@ -1,0 +1,279 @@
+ :root {
+    --wine: #8a3a3a;      /* Weinrot */
+    --wine-soft: #8A4F55;
+    --beige: #e9e1d6;    /* Warmes Beige */
+    --rose: #c7a3a3;     /* dezenter Akzent */
+    --text: #2f2f2f;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--beige);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+
+    header {
+      background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+      url("/images/background.png") center/cover;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    /* Umzugs-Banner */
+    .move-banner {
+      width: 100%;
+      overflow: hidden;
+      background-color: var(--wine-soft);
+      padding: 10px 0;
+      margin-bottom: 35px;
+    }
+
+    .move-text {
+      display: inline-block;
+      white-space: nowrap;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      animation: moveLeft 20s linear infinite;
+    }
+
+    /* Animation von rechts nach links */
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.7rem;
+      color: var(--violet);
+      margin-bottom: 15px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto 35px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 40px;
+      background-color: var(--wine);
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 8px;
+      transition: background 0.3s;
+    }
+
+    .btn.secondary {
+        background-color: var(--beige);
+        color: var(--wine);
+        border: 1px solid var(--wine);
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      color: var(--wine);
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .about {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+    }
+
+
+    /* Mobile */
+    @media (max-width: 800px) {
+      .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .about-text h2 {
+        text-align: center;
+      }
+    }
+
+    /* Über mich – White Box */
+    #about-me {
+      padding: 80px 20px;
+    }
+
+    .about-box {
+      max-width: 1000px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 60px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.06);
+    }
+
+    .about-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+    }
+
+    .about-photo {
+        margin-top: 25px;
+      flex-shrink: 0;
+    }
+
+    .about-photo img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--beige);
+    }
+
+    .about-content h2 {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .about-content .btn {
+      margin-top: 10px;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .about-row {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-content h2 {
+        text-align: center;
+      }
+    }
+
+
+    /* Galerie Section */
+    #slideshow {
+      position: relative;
+      height: 400px;
+      max-width: 800px;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    #slideImage {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Pfeile */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2.5rem;
+      color: rgba(255,255,255,0.85);
+      padding: 8px 12px;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(0,0,0,0.2);
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    .arrow:hover {
+      background: rgba(0,0,0,0.4);
+    }
+
+    #prev { left: 15px; }
+    #next { right: 15px; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--wine);
+      font-weight: 500;
+    }
+
+    .butterfly {
+      font-size: 1.6rem;
+      color: var(--rose);
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+      .header-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+
+    footer {
+      background-color: var(--wine);
+      padding: 35px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }

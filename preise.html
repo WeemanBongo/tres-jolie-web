@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Preisliste – Kosmetik & Fusspflegepraxis Très Jolie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --wine: #8A4F55;
+      --beige: #EFE6D8;
+      --rose: #C9A2A6;
+      --text: #2f2f2f;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--beige);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+      url("/images/background.png") center/cover;
+      padding: 120px 20px;
+      text-align: center;
+    }
+
+    /* Home Button */
+    .home-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      color: var(--wine);
+      font-weight: 500;
+      border: 1px solid var(--wine);
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.6);
+      transition: 0.3s;
+    }
+
+    .home-btn:hover {
+      background: var(--wine);
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.3rem;
+      color: var(--wine);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--wine);
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+    }
+
+    /* Preisliste */
+    .price-list {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .price-category {
+      margin-bottom: 45px;
+    }
+
+    .price-category h3 {
+      color: var(--wine);
+      border-bottom: 1px solid var(--rose);
+      padding-bottom: 6px;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #d6c8c0;
+    }
+
+    .price-value {
+      font-weight: 500;
+      color: var(--wine);
+    }
+
+    footer {
+      background-color: var(--wine);
+      padding: 35px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="/" class="home-btn">← Home</a>
+
+  <img src="/images/logo.png" alt="Très Jolie Logo" class="header-logo">
+
+</header>
+
+<section>
+  <h2>Preisliste</h2>
+  <div id="price-list" class="price-list"></div>
+</section>
+
+<footer>
+  © 2026 Kosmetik & Fusspflegepraxis - Très Jolie · 🦋 modern · natürlich · schön
+</footer>
+
+<!-- CSV IMPORT -->
+<script>
+fetch('/data/preisliste.csv')
+  .then(res => res.text())
+  .then(text => {
+    const rows = text.trim().split('\n').slice(1);
+    const container = document.getElementById('price-list');
+    const categories = {};
+
+    rows.forEach(row => {
+      const [category, name, price] = row.split(',');
+      if (!categories[category]) categories[category] = [];
+      categories[category].push({ name, price });
+    });
+
+    Object.keys(categories).forEach(category => {
+      const section = document.createElement('div');
+      section.className = 'price-category';
+
+      section.innerHTML = `<h3>${category}</h3>`;
+
+      categories[category].forEach(item => {
+        section.innerHTML += `
+          <div class="price-item">
+            <span>${item.name}</span>
+            <span class="price-value">CHF ${item.price}</span>
+          </div>`;
+      });
+
+      container.appendChild(section);
+    });
+  });
+</script>
+
+</body>
+</html>

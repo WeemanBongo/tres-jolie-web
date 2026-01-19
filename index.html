@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kosmetik & Fusspflegepraxis - Très Jolie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/main-style.css">
+</head>
+<body>
+
+<header>
+  <div class="move-banner">
+    <div class="move-text">
+      🦋&nbsp;&nbsp;Neu ist die Praxis an der Halde 41 in Triesen und nicht mehr in Sevelen.&nbsp;&nbsp;🦋
+    </div>
+  </div>
+  <img src="/images/logo.png" alt="Très Jolie Logo" class="header-logo">
+  <h1>Herzlich Willkommen</h1>
+  <p>Moderne Kosmetik und professionelle Fusspflege – sanft, natürlich und stilvoll.</p>
+    <a href="#kontakt" class="btn">Termin vereinbaren</a>
+    <a href="#about-me" class="btn secondary">Über mich</a>
+    <a href="/preise.html" class="btn secondary">Preisliste</a>
+</header>
+
+<section>
+  <h2>Willkommen</h2>
+  <div class="about">
+    In der Kosmetik & Fusspflegepraxis <strong>Très Jolie</strong> stehen Ihr Wohlbefinden,
+    hochwertige Pflegeprodukte und individuell abgestimmte Behandlungen im Mittelpunkt.
+    Geniessen Sie moderne Behandlungen in ruhiger Atmosphäre.
+  </div>
+</section>
+
+<section>
+  <h2>Galerie</h2>
+  <div id="slideshow">
+    <img id="slideImage" src="" alt="Behandlung">
+    <!-- Links/ Rechts Pfeile -->
+    <div id="prev" class="arrow">&#10094;</div> <!-- links -->
+    <div id="next" class="arrow">&#10095;</div> <!-- rechts -->
+  </div>
+</section>
+
+
+<section>
+  <h2>Behandlungen</h2>
+  <div class="services">
+    <div class="card">
+      <div class="butterfly">🌸</div>
+      <h3>Kosmetik</h3>
+      <p>Moderne Gesichtsbehandlungen für ein frisches,
+         gepflegtes Hautbild – individuell abgestimmt.</p>
+    </div>
+
+    <div class="card">
+      <div class="butterfly">🦶</div>
+      <h3>Fusspflege</h3>
+      <p>Professionelle kosmetische und medizinische Fusspflege
+         für gesunde und schöne Füsse.</p>
+    </div>
+
+    <div class="card">
+      <div class="butterfly">🦋</div>
+      <h3>Entspannung</h3>
+      <p>Sanfte Pflege, hochwertige Produkte und kleine Auszeiten
+         für Körper und Seele.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about-me">
+  <div class="about-box">
+
+    <div class="about-row">
+      <div class="about-photo">
+        <img src="/images/portrait.png" alt="Inhaberin Très Jolie">
+      </div>
+
+      <div class="about-content">
+        <h2>Wer steckt hinter Kosmetik & Fusspflegepraxis très Jolie?</h2>
+        <p>
+          Mein Name ist <strong>Janine Risch</strong>. Meine Praxis habe ich im September 2014 in Sevelen eröffnet, wo ich die letzten Jahre einiges an Erfahrung gesammelt habe und ich tolle Stammkunden gewinnen durfte. Nach meiner halbjährigen Babypause, beginnt für mich ein neues Kapitel. Ab April 2026 starte ich mit der neuen Praxis in Triesen.
+        </p>
+        <p>
+          Ich habe die Ausbildung als medizinische Praxisassistentin im Jahr 2011 erfolgreich bestanden und arbeitete die darauffolgenden Jahre bei verschiedenen Spezialärzten. Im 2013 habe ich nebenberuflich mit der Ausbildung zur Kosmetikerin begonnen und anschliessend die Fusspflegeausbildung in Zürich absolviert. Nach den erfolgreichen Abschlüssen wagte ich den Schritt in die Selbständigkeit. Ich besuchte laufend Schulungen und lernte ständig etwas Neues dazu, da mir Weiterbildung sehr wichtig ist. 
+        </p>
+        <p>
+          Seit September 2025 bin ich glückliche Mama von einer Tochter geworden, daher arbeite ich ab April 2026 im Teilzeitpensum. In meiner Freizeit neben Kind und Haushalt, gehe ich sehr gerne zum Pferd Lory und geniesse die tollen Ausritte im Freien. Da kann ich abschalten, den Kopf auslüften und wieder neue Energie tanken. Ebenfalls habe ich freudige Erlebnisse mit meinem Ehemann Fabian, meiner Tochter Nayla, sowie den beiden Katzen Mila & Maylo.
+        </p>
+        <p>
+          Eine Terminanfrage von Dir würde mich sehr freuen.
+        </p>
+        <p>
+          Herzlichst
+        </p>
+        <p>
+          Janine
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <div class="contact">
+    📍 <a href="https://www.google.com/maps/search/?api=1&query=An+der+Halde+41,+9495+Triesen,+Liechtenstein" target="_blank">
+         An der Halde 41, 9495 Triesen · Liechtenstein
+       </a><br><br>
+    📞 +423 123 45 67<br>
+    ✉️ <a href="mailto:info@tresjolie.li"> info@tresjolie.li </a><br>
+    ⏰ Termine nach Vereinbarung
+  </div>
+</section>
+
+
+<footer>
+  © 2026 Kosmetik & Fusspflegepraxis - Très Jolie · 🦋 modern · natürlich · schön
+</footer>
+
+<script>
+  let images = [];
+  let currentIndex = 0;
+  const slideImg = document.getElementById("slideImage");
+
+  // Bilder von images.json laden
+  fetch('images.json')
+    .then(res => {
+      if (!res.ok) throw new Error('images.json not found');
+      return res.json();
+    })
+    .then(data => {
+      images = data;
+      if(images.length > 0) slideImg.src = images[0]; // erstes Bild setzen
+    })
+    .catch(err => console.error(err));
+
+  // Bild wechseln Funktion
+  function showSlide(index) {
+    if(images.length === 0) return;
+    currentIndex = (index + images.length) % images.length; // zyklisch
+    slideImg.style.opacity = 0;
+    setTimeout(() => {
+      slideImg.src = images[currentIndex];
+      slideImg.style.opacity = 1;
+    }, 200);
+  }
+
+  // Nächstes/ vorheriges Bild
+  function nextSlide() { showSlide(currentIndex + 1); }
+  function prevSlide() { showSlide(currentIndex - 1); }
+
+  // Pfeile anklicken
+  document.getElementById('next').addEventListener('click', () => { nextSlide(); resetInterval(); });
+  document.getElementById('prev').addEventListener('click', () => { prevSlide(); resetInterval(); });
+
+  // Klick direkt auf Bild → zufällig
+  slideImg.addEventListener('click', () => {
+    let rand;
+    do { rand = Math.floor(Math.random() * images.length); } 
+    while(rand === currentIndex);
+    showSlide(rand);
+    resetInterval();
+  });
+
+  // Automatik alle 10 Sekunden
+  let slideInterval = setInterval(nextSlide, 10000);
+
+  // Reset Intervall, wenn Nutzer klickt
+  function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 10000);
+  }
+</script>
+
+
+
+</body>
+</html>
