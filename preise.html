@@ -24,6 +24,7 @@
       line-height: 1.7;
     }
 
+    /* HEADER */
     header {
       background: linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
       url("/images/background.png") center/cover;
@@ -31,18 +32,17 @@
       text-align: center;
     }
 
-    /* Home Button */
     .home-btn {
       position: absolute;
       top: 20px;
       left: 20px;
       text-decoration: none;
       color: var(--wine);
-      font-weight: 500;
       border: 1px solid var(--wine);
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.6);
+      font-weight: 500;
+      background: rgba(255,255,255,0.7);
       transition: 0.3s;
     }
 
@@ -51,19 +51,15 @@
       color: white;
     }
 
+
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       color: var(--wine);
-      margin-bottom: 10px;
+      margin-bottom: 0;
     }
 
-    header p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.05rem;
-    }
-
+    /* CONTENT */
     section {
       padding: 70px 20px;
       max-width: 1000px;
@@ -78,42 +74,129 @@
       font-size: 2rem;
     }
 
-    /* Preisliste */
+    /* PREISLISTE */
     .price-list {
       max-width: 900px;
       margin: auto;
     }
 
     .price-category {
-      margin-bottom: 45px;
+      margin-bottom: 65px;
     }
 
     .price-category h3 {
+      font-family: 'Playfair Display', serif;
       color: var(--wine);
+      font-size: 1.6rem;
       border-bottom: 1px solid var(--rose);
       padding-bottom: 6px;
-      margin-bottom: 18px;
-      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .category-description {
+      font-size: 0.95rem;
+      color: #5f5f5f;
+      margin-bottom: 28px;
+      max-width: 760px;
     }
 
     .price-item {
       display: flex;
       justify-content: space-between;
-      padding: 10px 0;
+      gap: 20px;
+      padding: 14px 0;
       border-bottom: 1px dashed #d6c8c0;
+    }
+
+    .price-text {
+      max-width: 75%;
+    }
+
+    .price-text strong {
+      display: block;
+      font-weight: 500;
+    }
+
+    .item-description {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 6px 0 4px;
+    }
+
+    .duration {
+      font-size: 0.85rem;
+      color: #777;
     }
 
     .price-value {
       font-weight: 500;
       color: var(--wine);
+      white-space: nowrap;
     }
 
+    /* FOOTER */
     footer {
       background-color: var(--wine);
       padding: 35px 20px;
       text-align: center;
       font-size: 0.9rem;
+      color: white;
     }
+
+    /* =========================
+      MOBILE OPTIMIERUNG – PREISE
+      ========================= */
+
+    @media (max-width: 700px) {
+
+      section {
+        padding: 40px 16px;
+      }
+
+      header {
+        padding: 80px 16px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .price-category h3 {
+        font-size: 1.35rem;
+      }
+
+      .category-description {
+        font-size: 0.9rem;
+      }
+
+      .price-item {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .price-text {
+        max-width: 100%;
+      }
+
+      .item-description {
+        font-size: 0.85rem;
+      }
+
+      .duration {
+        font-size: 0.85rem;
+      }
+
+      .price-value {
+        font-size: 1rem;
+        align-self: flex-end;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding: 28px 16px;
+      }
+    }
+
   </style>
 </head>
 
@@ -121,21 +204,19 @@
 
 <header>
   <a href="/" class="home-btn">← Home</a>
-
   <img src="/images/logo.png" alt="Très Jolie Logo" class="header-logo">
-
+  <h1>Preisliste</h1>
 </header>
 
 <section>
-  <h2>Preisliste</h2>
+  <h2>Unsere Behandlungen & Preise</h2>
   <div id="price-list" class="price-list"></div>
 </section>
 
 <footer>
-  © 2026 Kosmetik & Fusspflegepraxis - Très Jolie · 🦋 modern · natürlich · schön
+  © 2026 Kosmetik & Fusspflegepraxis – Très Jolie · modern · natürlich · schön 🦋
 </footer>
 
-<!-- CSV IMPORT -->
 <script>
 fetch('/data/preisliste.csv')
   .then(res => res.text())
@@ -145,26 +226,58 @@ fetch('/data/preisliste.csv')
     const categories = {};
 
     rows.forEach(row => {
-      const [category, name, price] = row.split(',');
-      if (!categories[category]) categories[category] = [];
-      categories[category].push({ name, price });
+       if (!row.trim()) return;
+
+      const values = row.match(/(".*?"|[^",\n]+)(?=\s*,|\s*$)/g)
+                        .map(v => v.replace(/(^"|"$)/g, ''));
+
+      const [
+        category,
+        categoryDesc,
+        name,
+        itemDesc,
+        duration,
+        price
+      ] = values;
+
+      if (!categories[category]) {
+        categories[category] = {
+          description: categoryDesc,
+          items: []
+        };
+      }
+
+      categories[category].items.push({
+        name,
+        itemDesc,
+        duration,
+        price
+      });
     });
 
-    Object.keys(categories).forEach(category => {
-      const section = document.createElement('div');
-      section.className = 'price-category';
+    Object.entries(categories).forEach(([category, data]) => {
+      const block = document.createElement('div');
+      block.className = 'price-category';
 
-      section.innerHTML = `<h3>${category}</h3>`;
+      block.innerHTML = `
+        <h3>${category}</h3>
+        <p class="category-description">${data.description}</p>
+      `;
 
-      categories[category].forEach(item => {
-        section.innerHTML += `
+      data.items.forEach(item => {
+        block.innerHTML += `
           <div class="price-item">
-            <span>${item.name}</span>
-            <span class="price-value">CHF ${item.price}</span>
-          </div>`;
+            <div class="price-text">
+              <strong>${item.name}</strong>
+              ${item.itemDesc ? `<div class="item-description">${item.itemDesc}</div>` : ``}
+              <div class="duration">⏱ ${item.duration}</div>
+            </div>
+            <div class="price-value">CHF ${item.price}</div>
+          </div>
+        `;
       });
 
-      container.appendChild(section);
+      container.appendChild(block);
     });
   });
 </script>

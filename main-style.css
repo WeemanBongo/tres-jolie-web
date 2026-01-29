@@ -111,19 +111,6 @@
       text-align: center;
     }
 
-
-    /* Mobile */
-    @media (max-width: 800px) {
-      .about-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .about-text h2 {
-        text-align: center;
-      }
-    }
-
     /* Über mich – White Box */
     #about-me {
       padding: 80px 20px;
@@ -170,19 +157,6 @@
     .about-content .btn {
       margin-top: 10px;
     }
-
-    /* Mobile */
-    @media (max-width: 900px) {
-      .about-row {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-content h2 {
-        text-align: center;
-      }
-    }
-
 
     /* Galerie Section */
     #slideshow {
@@ -272,8 +246,99 @@
       font-size: 0.9rem;
     }
 
+    /* =========================
+      MOBILE OPTIMIERUNG – MAIN
+      ========================= */
+
     @media (max-width: 600px) {
+
+      body {
+        line-height: 1.6;
+      }
+
+      header {
+        padding: 80px 16px 70px;
+      }
+
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+      }
+
+      .move-text {
+        font-size: 1rem;
+      }
+
+      .header-buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 0;
+      }
+
+      section {
+        padding: 40px 16px;
+      }
+
+      /* Über mich */
+      .about-box {
+        padding: 35px 20px;
+        border-radius: 22px;
+      }
+
+      .about-row {
+        gap: 30px;
+      }
+
+      .about-photo {
+        margin-top: 10px;
+      }
+
+      .about-photo img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .about-content p {
+        font-size: 1rem;
+      }
+
+      /* Galerie */
+      #slideshow {
+        height: 260px;
+        border-radius: 16px;
+      }
+
+      #slideImage {
+        border-radius: 16px;
+      }
+
+      .arrow {
+        font-size: 2rem;
+        padding: 6px 10px;
+      }
+
+      /* Cards */
+      .card {
+        padding: 28px 22px;
+        border-radius: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.15rem;
+      }
+
+      footer {
+        font-size: 0.85rem;
+        padding: 28px 16px;
       }
     }

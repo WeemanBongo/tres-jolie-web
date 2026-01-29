@@ -1,33 +1,29 @@
-﻿Kategorie,Leistung,Preis_CHF
-Gesichtsbehandlung,GB Ganzheitlich,188
-Gesichtsbehandlung,GB Vital,154
-Gesichtsbehandlung,GB Wellness,136
-Gesichtsbehandlung,GB to go,74
-Gesichtsbehandlung,GB Men Spezial,94
-Augenbrauen/Wimpern,Augenbrauenkorrektur,22
-Augenbrauen/Wimpern,Brauen färben,20
-Augenbrauen/Wimpern,Wimpern färben,27
-Augenbrauen/Wimpern,Augenbrauen mit Hennafarbe,56
-Maniküre,Maniküre ohne Lack,72
-Maniküre,Maniküre mit Lack,82
-Maniküre,Naturnagelverstärkung,85
-Maniküre,Gellack,70
-Maniküre,Maniküre mit Gellack,105
-Pediküre,Pediküre ohne Lack,92
-Pediküre,Pediküre mit Lack,102
-Pediküre,Pediküre mit Nagelspange,130
-Pediküre,Nagelspange ohne Pediküre,45
-Pediküre,Pediküre mit Gellack,112
-Pediküre,Pediküre mit French,118
-Pediküre,Gellack ohne Pediküre,70
-Pediküre,Gellack French ohne Pediküre,77
-Pediküre,Hühnerauge bearbeiten,49
-Pediküre,Fussreflexzonenmassage,95
-Enthaarung,Oberlippe,24
-Enthaarung,Oberlippe und Kinn,45
-Enthaarung,Gesicht komplett,55
-Enthaarung,Achseln,38
-Enthaarung,Halbe Arme,45
-Enthaarung,Ganze Arme,65
-Enthaarung,Halbe Beine,58
-Enthaarung,Ganze Beine,108
+﻿category,category_description,name,item_description,duration,price
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Drei Schwestern","Reinigung, Peeling, porentiefe Ausreinigung mit Dampf, Augenbrauen & Wimpern färben, Augenbrauenkorrektur, Gesichts-Hals-Dekolleté-Massage, intensive Maske, Handmassage, Wirkstoffampulle, Abschlusspflege","100 Minuten","188.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Augstenberg","Reinigung, Peeling, porentiefe Ausreinigung, Augenbrauenkorrektur, Gesichts-Hals-Dekolleté-Massage, Maske, Handmassage, Wirkstoffampulle, Abschlusspflege","90 Minuten","155.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Rappenstein","Reinigung, Peeling, porentiefe Ausreinigung, intensive Gesichtsmaske, Handmassage, Abschlusspflege","70 Minuten","135.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Silberhorn","Reinigung, Peeling, porentiefe Ausreinigung, Abschlusspflege","40 Minuten","72.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Galinakopf (Herren)","Reinigung, Peeling, porentiefe Ausreinigung, Augenbrauenkorrektur, Abschlusspflege","50 Minuten","94.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Microdermabrasion Naafkopf","Reinigung, Microdermabrasion, Maske, Wirkstoffampulle, Abschlusspflege, Sonnenschutz","60 Minuten","110.00"
+"Klassische Gesichtsbehandlungen","Die Haut – ein Spiegelbild der Seele. Geniesse wohltuende Gesichtsbehandlungen mit nachhaltigem Effekt, individuell auf deine Haut abgestimmt.","Fruchtsäurebehandlung Grauspitz","Reinigung, Fruchtsäurepeeling, Neutralisation, Maske, Wirkstoffampulle, Abschlusspflege, Sonnenschutz","60 Minuten","140.00"
+
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Pediküre ohne Lack","Fussbad, Nägel schneiden & feilen, Nagelhautpflege, Hornhautentfernung, Nagelöl, Fussmassage","60 Minuten","92.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Pediküre mit Lack","Fussbad, Nägelpflege, Hornhaut, Farblack, Nagelöl, Fussmassage","75 Minuten","102.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Pediküre mit Gellack Volllack","Fussbad, Nägelpflege, Hornhaut, Gellack Volllack, Nagelöl, Fussmassage","75 Minuten","110.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Pediküre mit Gellack French","Fussbad, Nägelpflege, Hornhaut, Gellack French, Nagelöl, Fussmassage","75 Minuten","115.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Hühnerauge bearbeiten","","ca. 20 Minuten","45.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Problemnägel – Spange setzen","","20 Minuten","50.00"
+"Pediküre","Tragen wir Sorge zu unseren Füssen – sie vollbringen täglich ihre Höchstleistung. Alle Problemstellen sind im Preis inkludiert.","Problemnägel – Tamponade setzen","","15 Minuten","25.00"
+
+"Maniküre","Unsere Hände sind ein wichtiger Teil unserer Ausstrahlung und verdienen besondere Pflege.","Maniküre ohne Lack","Handpeeling, Nägel feilen, Nagelhautpflege, Nagelöl, Handmassage","50 Minuten","70.00"
+"Maniküre","Unsere Hände sind ein wichtiger Teil unserer Ausstrahlung und verdienen besondere Pflege.","Maniküre mit Lack","Handpeeling, Nägelpflege, Farblack, Nagelöl, Handmassage","60 Minuten","80.00"
+"Maniküre","Unsere Hände sind ein wichtiger Teil unserer Ausstrahlung und verdienen besondere Pflege.","Maniküre mit Gellack","Nägelpflege, Gellack, Nagelöl, Handmassage","60 Minuten","90.00"
+
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Oberlippe","","15 Minuten","24.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Oberlippe & Kinn","","20 Minuten","40.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Gesicht komplett","","30 Minuten","55.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Achseln","","15 Minuten","38.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Halbe Arme","","25 Minuten","45.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Ganze Arme","","35 Minuten","65.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Halbe Beine","","30 Minuten","58.00"
+"Haarentfernung mit Warmwachs","Für glatte Haut und ein neues Körpergefühl – sanft und effektiv.","Ganze Beine","","50 Minuten","108.00"
