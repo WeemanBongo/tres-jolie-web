@@ -1,8 +1,8 @@
  :root {
-    --wine: #8a3a3a;      /* Weinrot */
+    --wine: #8a3a3a;
     --wine-soft: #8A4F55;
-    --beige: #e9e1d6;    /* Warmes Beige */
-    --rose: #c7a3a3;     /* dezenter Akzent */
+    --beige: #fff3ea;
+    --rose: #c7a3a3;
     --text: #2f2f2f;
     }
 
@@ -264,12 +264,12 @@
       flex-wrap: wrap;
     }
 
-
     footer {
       background-color: var(--wine);
       padding: 35px 20px;
       text-align: center;
       font-size: 0.9rem;
+      color: white;
     }
 
     @media (max-width: 600px) {
