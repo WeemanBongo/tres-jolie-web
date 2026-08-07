@@ -3,13 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Kosmetik & Fusspflegepraxis - Très Jolie</title>
+  <meta name="description" content="Kosmetik & Fusspflegepraxis Très Jolie in Triesen, Liechtenstein – moderne Gesichtsbehandlungen, professionelle Pediküre und Maniküre. Termine nach Vereinbarung.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8a3a3a">
   <meta name="google-site-verification" content="zOw8p_w0V0qFQGpBh6oVk-3hxtzvcWe-X2ELYsu2XB8" />
+  <link rel="canonical" href="https://www.praxis-tres-jolie.li/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kosmetik & Fusspflegepraxis - Très Jolie">
+  <meta property="og:description" content="Moderne Kosmetik und professionelle Fusspflege in Triesen, Liechtenstein – sanft, natürlich und stilvoll.">
+  <meta property="og:image" content="https://www.praxis-tres-jolie.li/images/background.jpg">
+  <meta property="og:url" content="https://www.praxis-tres-jolie.li/">
+  <meta property="og:locale" content="de_CH">
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/images/logo.png">
   <!-- CSS -->
   <link rel="stylesheet" href="/main-style.css">
+  <!-- Strukturierte Daten für Google (lokales Unternehmen) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["BeautySalon", "NailSalon"],
+    "name": "Kosmetik & Fusspflegepraxis Très Jolie",
+    "image": "https://www.praxis-tres-jolie.li/images/portrait.jpg",
+    "url": "https://www.praxis-tres-jolie.li/",
+    "telephone": "+41787477383",
+    "email": "risch-cosmetiques@hotmail.com",
+    "priceRange": "CHF",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "An der Halde 41",
+      "postalCode": "9495",
+      "addressLocality": "Triesen",
+      "addressCountry": "LI"
+    },
+    "areaServed": ["Triesen", "Liechtenstein", "Sevelen", "Werdenberg"],
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
 
@@ -19,13 +53,15 @@
       🦋&nbsp;&nbsp;Neu ist die Praxis an der Halde 41 in Triesen und nicht mehr in Sevelen.&nbsp;&nbsp;🦋
     </div>
   </div>
-  <img src="/images/logo.png" alt="Très Jolie Logo" class="header-logo">
+  <img src="/images/logo.png" alt="Très Jolie Logo" class="header-logo" width="280" height="168">
   <h1>Herzlich Willkommen</h1>
   <p>Moderne Kosmetik und professionelle Fusspflege in Triesen Liechtenstein – sanft, natürlich und stilvoll.</p>
     <a href="#kontakt" class="btn">Termin vereinbaren</a>
     <a href="#about-me" class="btn secondary">Über mich</a>
     <a href="/preise" class="btn secondary">Preisliste</a>
 </header>
+
+<main>
 
 <section>
   <h2>Schön, dass Du da bist!</h2>
@@ -46,10 +82,10 @@
 <section>
   <h2>Praxis</h2>
   <div id="slideshow">
-    <img id="slideImage" src="" alt="Behandlung">
+    <img id="slideImage" alt="Eindrücke aus der Praxis Très Jolie" hidden>
     <!-- Links/ Rechts Pfeile -->
-    <div id="prev" class="arrow">&#10094;</div> <!-- links -->
-    <div id="next" class="arrow">&#10095;</div> <!-- rechts -->
+    <div id="prev" class="arrow" role="button" tabindex="0" aria-label="Vorheriges Bild">&#10094;</div>
+    <div id="next" class="arrow" role="button" tabindex="0" aria-label="Nächstes Bild">&#10095;</div>
   </div>
 </section>
 
@@ -59,7 +95,7 @@
   <div class="services">
     <div class="card">
       <div class="about-photo">
-        <img src="/images/cosmetic.png" alt="cosmetic">
+        <img src="/images/cosmetic.jpg" alt="Kosmetikbehandlung" width="240" height="240" loading="lazy" decoding="async">
       </div>
       <h3>Kosmetik</h3>
       <p>Moderne Gesichtsbehandlungen für ein frisches,
@@ -68,7 +104,7 @@
 
     <div class="card">
       <div class="about-photo">
-        <img src="/images/feet.png" alt="feet">
+        <img src="/images/feet.jpg" alt="Pediküre / Fusspflege" width="240" height="240" loading="lazy" decoding="async">
       </div>
       <h3>Pediküre</h3>
       <p>Professionelle Pediküre sorgt für gepflegte, gesunde und schöne Füsse und beugt Beschwerden vor.</p>
@@ -76,7 +112,7 @@
 
     <div class="card">
       <div class="about-photo">
-        <img src="/images/manicure.png" alt="manicure">
+        <img src="/images/manicure.jpg" alt="Maniküre" width="240" height="240" loading="lazy" decoding="async">
       </div>
       <h3>Maniküre</h3>
       <p>Erstklassige Maniküre schenkt den Händen vollendete Pflege, geschmeidige Haut und perfekt geformte Nägel – für ein elegantes, gepflegtes Erscheinungsbild.</p>
@@ -89,7 +125,7 @@
 
     <div class="about-row">
       <div class="about-photo">
-        <img src="/images/portrait.png" alt="Inhaberin Très Jolie">
+        <img src="/images/portrait.jpg" alt="Janine Risch, Inhaberin Très Jolie" width="240" height="240" loading="lazy" decoding="async">
       </div>
 
       <div class="about-content">
@@ -120,26 +156,28 @@
 <section id="kontakt">
   <h2>Kontakt</h2>
   <div class="contact">
-    📍 <a href="https://www.google.com/maps/search/?api=1&query=An+der+Halde+41,+9495+Triesen,+Liechtenstein" target="_blank">
+    📍 <a href="https://www.google.com/maps/search/?api=1&query=An+der+Halde+41,+9495+Triesen,+Liechtenstein" target="_blank" rel="noopener noreferrer">
          An der Halde 41, 9495 Triesen · Liechtenstein
        </a><br>
-  <div class="map">
-    <iframe
-      title="Standort Tres Jolie"
-      src="https://www.google.com/maps?q=An%20der%20Halde%2041%2C%209495%20Triesen%2C%20Liechtenstein&output=embed"
-      width="50%"
-      height="160"
-      style="border:0;"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      allowfullscreen>
-    </iframe>
-  </div><br>
-
-    📞 +41 78 747 73 83<br>
-    ✉️ <a href="mailto:risch-cosmetiques@hotmail.com"> risch-cosmetiques@hotmail.com </a><br>
+    <div class="map">
+      <iframe
+        title="Standort Très Jolie"
+        src="https://www.google.com/maps?q=An%20der%20Halde%2041%2C%209495%20Triesen%2C%20Liechtenstein&output=embed"
+        width="500"
+        height="160"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+    📞 <a href="tel:+41787477383">+41 78 747 73 83</a><br>
+    ✉️ <a href="mailto:risch-cosmetiques@hotmail.com">risch-cosmetiques@hotmail.com</a><br>
     ⏰ Termine nach Vereinbarung
+  </div>
 </section>
+
+</main>
 
 
 <footer>
@@ -149,23 +187,51 @@
 <script>
   let images = [];
   let currentIndex = 0;
+  let slideInterval = null;
+  const slideshow = document.getElementById("slideshow");
   const slideImg = document.getElementById("slideImage");
+  const prevArrow = document.getElementById("prev");
+  const nextArrow = document.getElementById("next");
 
   // Bilder von images.json laden
-  fetch('images.json')
+  fetch('/images.json')
     .then(res => {
       if (!res.ok) throw new Error('images.json not found');
       return res.json();
     })
     .then(data => {
-      images = data;
-      if(images.length > 0) slideImg.src = images[0]; // erstes Bild setzen
+      images = Array.isArray(data) ? data : [];
+      if (images.length > 0) {
+        slideImg.src = images[0];
+        slideImg.hidden = false;
+        if (images.length > 1) {
+          slideInterval = setInterval(nextSlide, 10000);
+        } else {
+          prevArrow.style.display = 'none';
+          nextArrow.style.display = 'none';
+        }
+      } else {
+        showEmptyState();
+      }
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      console.error(err);
+      showEmptyState();
+    });
+
+  function showEmptyState() {
+    prevArrow.style.display = 'none';
+    nextArrow.style.display = 'none';
+    slideImg.hidden = true;
+    const msg = document.createElement('div');
+    msg.className = 'slideshow-empty';
+    msg.textContent = 'Bilder werden bald hier zu sehen sein.';
+    slideshow.appendChild(msg);
+  }
 
   // Bild wechseln Funktion
   function showSlide(index) {
-    if(images.length === 0) return;
+    if (images.length === 0) return;
     currentIndex = (index + images.length) % images.length; // zyklisch
     slideImg.style.opacity = 0;
     setTimeout(() => {
@@ -178,24 +244,33 @@
   function nextSlide() { showSlide(currentIndex + 1); }
   function prevSlide() { showSlide(currentIndex - 1); }
 
-  // Pfeile anklicken
-  document.getElementById('next').addEventListener('click', () => { nextSlide(); resetInterval(); });
-  document.getElementById('prev').addEventListener('click', () => { prevSlide(); resetInterval(); });
+  // Pfeile anklicken (Maus & Tastatur)
+  function onArrowKey(handler) {
+    return (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handler();
+      }
+    };
+  }
+  nextArrow.addEventListener('click', () => { nextSlide(); resetInterval(); });
+  prevArrow.addEventListener('click', () => { prevSlide(); resetInterval(); });
+  nextArrow.addEventListener('keydown', onArrowKey(() => { nextSlide(); resetInterval(); }));
+  prevArrow.addEventListener('keydown', onArrowKey(() => { prevSlide(); resetInterval(); }));
 
-  // Klick direkt auf Bild → zufällig
+  // Klick direkt auf Bild → zufällig anderes Bild
   slideImg.addEventListener('click', () => {
+    if (images.length < 2) return;
     let rand;
-    do { rand = Math.floor(Math.random() * images.length); } 
-    while(rand === currentIndex);
+    do { rand = Math.floor(Math.random() * images.length); }
+    while (rand === currentIndex);
     showSlide(rand);
     resetInterval();
   });
 
-  // Automatik alle 10 Sekunden
-  let slideInterval = setInterval(nextSlide, 10000);
-
   // Reset Intervall, wenn Nutzer klickt
   function resetInterval() {
+    if (!slideInterval) return;
     clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide, 10000);
   }

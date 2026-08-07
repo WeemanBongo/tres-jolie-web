@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.praxis-tres-jolie.li/sitemap.xml
