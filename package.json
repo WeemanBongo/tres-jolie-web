@@ -4,6 +4,7 @@
   "description": "Statische Website – Kosmetik & Fusspflegepraxis Très Jolie",
   "scripts": {
     "build": "node scripts/build.js",
+    "build:check": "node scripts/build.js --check",
     "dev": "npm run build && node scripts/dev-server.js"
   }
 }

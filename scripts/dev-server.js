@@ -21,9 +21,14 @@ const mimeTypes = {
 };
 
 function resolveSafePath(urlPath) {
-  const decoded = decodeURIComponent(urlPath.split('?')[0]);
+  let decoded;
+  try {
+    decoded = decodeURIComponent(urlPath.split('?')[0]);
+  } catch {
+    return null;
+  }
   const resolved = path.normalize(path.join(root, decoded));
-  if (!resolved.startsWith(root)) return null;
+  if (resolved !== root && !resolved.startsWith(root + path.sep)) return null;
   return resolved;
 }
 
