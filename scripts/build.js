@@ -29,7 +29,8 @@ let outOfSync = false;
 
 for (const page of pages) {
   const raw = fs.readFileSync(page.src, 'utf8');
-  const output = withGeneratedNotice(resolveIncludes(raw), path.relative(root, page.src));
+  const srcRelPath = path.relative(root, page.src).split(path.sep).join('/');
+  const output = withGeneratedNotice(resolveIncludes(raw), srcRelPath);
 
   if (checkOnly) {
     const current = fs.existsSync(page.out) ? fs.readFileSync(page.out, 'utf8') : null;
