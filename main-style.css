@@ -324,6 +324,163 @@ h2 {
   border-radius: 12px;
 }
 
+/* Bewertungen – kompakte Unter-Sektion von Kontakt */
+.reviews {
+  max-width: 620px;
+  margin: 40px auto 0;
+  padding-top: 32px;
+  border-top: 1px solid rgba(138, 58, 58, 0.15);
+  text-align: center;
+}
+
+.reviews-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: var(--wine-soft);
+}
+
+.g-logo {
+  flex-shrink: 0;
+}
+
+.stars {
+  color: #f0a92e;
+  letter-spacing: 0.14em;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.review-rotator {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 210px;
+  padding: 40px 34px 32px;
+  background: #fff;
+  border: 1px solid rgba(138, 58, 58, 0.1);
+  border-radius: 22px;
+  box-shadow: 0 22px 45px rgba(138, 58, 58, 0.09);
+}
+
+.review-rotator::before {
+  content: "\201C";
+  position: absolute;
+  top: -0.32em;
+  left: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--rose);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.review-slide {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.55s ease, transform 0.55s ease, visibility 0s linear 0.55s;
+}
+
+.review-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.55s ease, transform 0.55s ease, visibility 0s;
+}
+
+.review-slide blockquote {
+  margin: 14px 0 18px;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.review-slide figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--wine);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.review-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--wine);
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.review-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--rose);
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.review-dots button:hover {
+  opacity: 0.7;
+}
+
+.review-dots button[aria-selected="true"] {
+  opacity: 1;
+  background: var(--wine);
+  transform: scale(1.35);
+}
+
+.reviews-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.btn-sm {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-slide {
+    transition: opacity 0.2s linear, visibility 0s;
+    transform: none;
+  }
+  .review-slide.is-active {
+    transition: opacity 0.2s linear, visibility 0s;
+    transform: none;
+  }
+}
+
 footer {
   background-color: var(--wine);
   padding: 35px 20px;
